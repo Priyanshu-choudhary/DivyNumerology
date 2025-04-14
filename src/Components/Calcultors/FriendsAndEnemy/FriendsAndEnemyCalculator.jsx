@@ -5,14 +5,14 @@ import 'jspdf-autotable';
 // Master Numerology Table
 const numerologyTable = {
   1: { role: 'KING', friends: [1, 2, 3, 5, 6, 9], enemy: [8], neutral: [4, 7] },
-  2: { role: 'QUEEN', friends: [1, 2, 3, 5], enemy: [8, 4, 9], neutral: [7, 6] },
-  3: { role: 'PRIME MINISTER', friends: [1, 2, 3, 5, 7], enemy: [6], neutral: [4, 8, 7, 9] },
-  4: { role: 'REBEL', friends: [1, 5, 7, 6, 4, 8], enemy: [2, 9], neutral: [3] },
+  2: { role: 'QUEEN', friends: [1, 2, 3, 5,7], enemy: [8, 4, 9], neutral: [ 6] },//check------------->
+  3: { role: 'PRIME MINISTER', friends: [1, 3, 5, 7], enemy: [6], neutral: [4, 8, 7, 9] },//check------------->
+  4: { role: 'REBEL', friends: [1, 5, 7, 6, 4, 8], enemy: [2, 9], neutral: [3] },  //check----------->
   5: { role: 'PRINCE', friends: [1, 2, 3, 5, 6], enemy: [], neutral: [4, 7, 8, 9] },
   6: { role: 'TEACHER (DEVIL)', friends: [1, 4, 5, 6, 7], enemy: [3], neutral: [2, 8, 9] },
-  7: { role: 'SAINT', friends: [1, 3, 5, 4, 6], enemy: [], neutral: [8, 2, 7, 9] },
-  8: { role: 'JUDGE', friends: [5, 3, 6, 7, 4, 8], enemy: [1, 2], neutral: [9] },
-  9: { role: 'COMMANDER', friends: [1, 3, 5], enemy: [4, 2], neutral: [9, 7, 6, 8] },
+  7: { role: 'SAINT', friends: [1, 3, 5, 4, 6], enemy: [], neutral: [8, 2, 7, 9,3] },
+  8: { role: 'JUDGE', friends: [5, 3, 6, 7, 4, 8], enemy: [1, 2,], neutral: [9,6,7] },//check------------>
+  9: { role: 'COMMANDER', friends: [1, 5], enemy: [4, 2,9], neutral: [3,7,6,8,9] },
 };
 
 // Utility: Single-digit sum
