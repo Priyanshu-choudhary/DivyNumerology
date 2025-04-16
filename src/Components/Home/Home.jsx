@@ -3,8 +3,19 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useNavigate } from 'react-router-dom';
 // Import professional icons from Heroicons
-import { AcademicCapIcon, BookOpenIcon, UserGroupIcon, CalendarIcon } from '@heroicons/react/solid';
 
+import { 
+    AcademicCapIcon, 
+    BookOpenIcon, 
+    UserGroupIcon, 
+    CalendarIcon,
+    ChartBarIcon,
+    HeartIcon,
+    BadgeCheckIcon,
+    ClockIcon,
+    DocumentTextIcon,
+    PhoneIcon
+  } from '@heroicons/react/solid';
 const Home = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
@@ -51,7 +62,7 @@ const Home = () => {
               className="relative"
             >
               <img
-                src="maam.jpg"
+                src="maam2.jpg"
                 alt="Divyya Sharma - Numerologist"
                 className="rounded-lg shadow-2xl w-full max-w-md border-4 border-orange-500"
               />
@@ -216,6 +227,31 @@ const Home = () => {
                 Every client receives a unique numerology reading that covers career, relationships, and personal growth strategies tailored just for you.
               </p>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { number: '12+', label: 'Years Experience', icon: <ClockIcon className="w-8 h-8 mx-auto text-yellow-500" /> },
+              { number: '5,000+', label: 'Clients Served', icon: <UserGroupIcon className="w-8 h-8 mx-auto text-yellow-500" /> },
+              { number: '98%', label: 'Satisfaction Rate', icon: <HeartIcon className="w-8 h-8 mx-auto text-yellow-500" /> },
+              { number: '250+', label: 'Corporate Clients', icon: <ChartBarIcon className="w-8 h-8 mx-auto text-yellow-500" /> }
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                className="p-6 bg-yellow-50 rounded-lg"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                {stat.icon}
+                <div className="text-3xl font-bold text-gray-800 mt-2">{stat.number}</div>
+                <div className="text-gray-600">{stat.label}</div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
