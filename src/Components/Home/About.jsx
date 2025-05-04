@@ -70,10 +70,10 @@ const About = () => {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a
-                    href="/services"
+                    href="/Calculators"
                     className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
                   >
-                    Explore Services
+                    Explore Calculators
                   </a>
                   <a
                     href="#certificates"
@@ -101,50 +101,43 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* English Version */}
             <div className="space-y-8">
-              <div className="p-6 bg-orange-50 rounded-xl border-l-4 border-orange-500 shadow-sm">
+            <div className="p-6 bg-white rounded-xl border border-orange-100 shadow-sm">
                 <h3 className="text-xl font-semibold mb-3 text-orange-700">From Banking to Numerology</h3>
                 <p className="text-gray-700 leading-relaxed">
                   Divyya Sharma's journey began 12 years ago as a national bank officer. Fascinated by intricate number patterns, she embarked on a life-changing exploration of numerology.
                 </p>
-              </div>
-
-              <div className="p-6 bg-white rounded-xl border border-orange-100 shadow-sm">
-                <h3 className="text-xl font-semibold mb-3 text-orange-700">The Turning Point</h3>
+                <h3 className=" mt-5 text-xl font-semibold mb-3 text-orange-700">The Turning Point</h3>
+               
                 <p className="text-gray-700 leading-relaxed">
                   Her initial numerology foray analyzed her Lo Shu grid chart, revealing an unexpected future in education. Within a year, she became Assistant Professor at a reputed State University.
                 </p>
-              </div>
-
-              <div className="p-6 bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl shadow-sm">
-                <h3 className="text-xl font-semibold mb-3 text-orange-700">Establishing Roots</h3>
+                <h3 className="mt-5 text-xl font-semibold mb-3 text-orange-700">Establishing Roots</h3>
                 <p className="text-gray-700 leading-relaxed">
                   With family support, Divyya established a private degree college within two years, reinforcing her belief in celestial bodies' influence and deepening her numerology commitment.
                 </p>
               </div>
+
+             
             </div>
 
             {/* Hindi Version */}
             <div className="space-y-8">
-              <div className="p-6 bg-yellow-50 rounded-xl border-l-4 border-yellow-500 shadow-sm">
+            <div className="p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-xl shadow-sm">
                 <h3 className="text-xl font-semibold mb-3 text-yellow-700">बैंकिंग से अंकशास्त्र तक</h3>
                 <p className="text-gray-700 leading-relaxed">
                   एक प्रतिष्ठित राष्ट्रीय बैंक में अधिकारी रहते हुए मेरा झुकाव अंकशास्त्र की ओर हुआ। खुद का लॉशोग्रिड चार्ट जब मैंने देखा, तो भविष्य में शिक्षा और ज्योतिष के क्षेत्र में जाने का संकेत मिला।
                 </p>
-              </div>
-
-              <div className="p-6 bg-white rounded-xl border border-yellow-100 shadow-sm">
-                <h3 className="text-xl font-semibold mb-3 text-yellow-700">निर्णायक मोड़</h3>
+                <h3 className=" mt-5 text-xl font-semibold mb-3 text-yellow-700">निर्णायक मोड़</h3>
                 <p className="text-gray-700 leading-relaxed">
                   परिस्थितियाँ बदलीं और मैं चौधरी चरण सिंह विश्वविद्यालय में असिस्टेंट प्रोफेसर बनी। आगे चलकर एक डिग्री कॉलेज की भी स्थापना की।
                 </p>
-              </div>
-
-              <div className="p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-xl shadow-sm">
-                <h3 className="text-xl font-semibold mb-3 text-yellow-700">अंकशास्त्र में विश्वास</h3>
+                <h3 className=" mt-5 text-xl font-semibold mb-3 text-yellow-700">अंकशास्त्र में विश्वास</h3>
                 <p className="text-gray-700 leading-relaxed">
                   इन अनुभवों से यह यकीन हुआ कि हमारे निर्णय नक्षत्रों और संख्याओं द्वारा तय होते हैं। इसी ने मेरा विश्वास इस दिव्य विद्या पर और प्रबल किया।
                 </p>
               </div>
+
+             
             </div>
           </div>
         </div>
@@ -155,7 +148,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our <span className="text-orange-600">Certifications</span>
+              My <span className="text-orange-600">Certifications</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               DivyNumerology is backed by extensive training and recognized certifications in the field of numerology.
@@ -212,18 +205,18 @@ const About = () => {
             Unlock the secrets hidden in your numbers and gain valuable insights into your life's journey.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <a
+            {/* <a
               href="/consultation"
               className="px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg"
             >
               Book a Consultation
-            </a>
-            <a
+            </a> */}
+            {/* <a
               href="/learn"
               className="px-8 py-4 bg-white text-orange-600 font-medium rounded-full shadow-md border border-orange-200 hover:bg-orange-50 transition-all duration-300 text-lg"
             >
               Learn Numerology Basics
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

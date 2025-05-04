@@ -7,9 +7,7 @@ import "swiper/css/navigation";
 const CertificateSlider = ({ certificates }) => {
   return (
     <div className="relative px-4 md:px-12 py-8">
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-orange-700">
-        My Certifications
-      </h2>
+     
 
       <Swiper
         spaceBetween={20}

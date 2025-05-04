@@ -150,9 +150,10 @@ const Home = () => {
                 </div>
 
                 <div className="mt-12 text-center">
-                  <button className="px-8 py-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-medium rounded-full hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                    Learn More About Our Services
-                  </button>
+                  <a  href="/about" className="px-8 py-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-medium rounded-full hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    
+                    Learn More About Our Divyya Sharma
+                  </a>
                 </div>
               </div>
             </div>
@@ -405,13 +406,15 @@ const Home = () => {
             <p className="text-xl md:text-2xl mb-8 text-yellow-50 max-w-3xl mx-auto">
               Get your personalized numerology report and begin your journey toward self-discovery and lasting transformation.
             </p>
-            <motion.button
+            <motion.a
+         
+              href="/calculators"
               whileHover={{ scale: 1.05, backgroundColor: "#e65100" }}
               whileTap={{ scale: 0.95 }}
               className="bg-orange-500 text-white font-bold px-10 py-4 rounded-full text-lg shadow-xl"
             >
               Get My Numerology Reading
-            </motion.button>
+            </motion.a>
           </motion.div>
         </div>
       </section>
