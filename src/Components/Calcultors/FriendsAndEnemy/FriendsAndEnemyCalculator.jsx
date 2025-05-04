@@ -141,7 +141,7 @@ const FriendsAndEnemyCalculator = () => {
 
         {driver && conductor && (
           <div className="mt-10">
-            <div className="grid md:grid-cols-2 gap-6">
+            {/* <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-orange-100 p-6 rounded-xl shadow">
                 <h2 className="text-2xl font-semibold text-orange-700 mb-2">Driver Number: {driver}</h2>
                 <p className="text-sm text-gray-700 mb-1">Neutral: {driverDetails.neutral?.join(', ')}</p>
@@ -154,7 +154,7 @@ const FriendsAndEnemyCalculator = () => {
                 <p className="text-sm text-red-600 mb-1">Enemy: {conductorDetails.enemy?.join(', ') || 'None'}</p>
                 <p className="text-sm text-green-700">Friends: {conductorDetails.left?.join(', ')}</p>
               </div>
-            </div>
+            </div> */}
 
             {/* <div className="mt-8 p-6 rounded-xl bg-white border border-dashed border-orange-300 shadow">
               <h3 className="text-xl font-bold text-orange-600 mb-2">Your Report</h3>
