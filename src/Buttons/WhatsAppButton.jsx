@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const WhatsAppButton = () => {
   const phoneNumber = "919012312552"; // WhatsApp number without '+'
-  const message = "Hi, I'm interested in your services!";
+  const message = "Hi, I'm interested in your Numerology services!";
 
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

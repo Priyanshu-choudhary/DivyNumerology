@@ -10,6 +10,8 @@ import CancellationRefundPolicy from './Components/TermsAndConditions/Cancellati
 import ShippingAndDeliveryPolicy from './Components/TermsAndConditions/ShippingAndDeliveryPolicy';
 import About from './Components/Home/About';
 import ScrollToTop from './ScrollToTop';
+import WhatsAppButton from './Buttons/WhatsAppButton';
+import ContactUs from './Components/Home/ContactUS';
 // import Navbar from './Components/Navbr/Navbr';
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
     <Router>
       <Navbar /> {/* Added the Navbar component here */}
       <ScrollToTop />
+      <WhatsAppButton/>
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/Calculators" element={<CalculatorNav />} />
@@ -28,6 +31,7 @@ function App() {
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/CancellationRefundPolicy" element={<CancellationRefundPolicy />} />
         <Route path="/ShippingAndDeliveryPolicy" element={<ShippingAndDeliveryPolicy />} />
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </Router>
   );

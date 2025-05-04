@@ -1,139 +1,236 @@
 import React from "react";
-import HeroSection from "./HeroSection";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Footer from "./Footer";
+import CertificateSlider from "./CertificateSlider";
 
 const About = () => {
-    return (
-        <>
-            <section className="bg-yellow-50 overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]  ">
-                <div className="container mx-auto">
-                    <div className="flex flex-wrap items-center justify-between -mx-4">
-                        <div className="w-full px-4 lg:w-6/12">
-                            <div className="flex items-center -mx-3 sm:-mx-4">
-                                <div className="w-full px-3 sm:px-4 xl:w-1/2">
-                                    <div className="py-3 sm:py-4">
-                                        <img
-                                            src="maam.jpg"
-                                            alt=""
-                                            className="w-full rounded-2xl"
-                                        />
-                                    </div>
-                                    <div className="py-3 sm:py-4">
-                                        <img
-                                            src="maam2.jpg"
-                                            alt=""
-                                            className="w-full rounded-2xl"
-                                        />
-                                    </div>
-                                </div>
-                                <div className="w-full px-3 sm:px-4 xl:w-1/2">
-                                    <div className="relative z-10 my-4">
-                                        <img
-                                            src="logo-removebg.png"
-                                            alt=""
-                                            className=" rounded-2xl"
+  // Certificate images array - replace with your actual certificate paths
+  const certificates = [
+    "./cert1.jpg",
+    "./cert2.jpg",
+    "./cert3.jpg",
+    "./cert4.jpg",
 
-                                        />
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+  ];
 
-                        <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
-                            <div className="mt-10 lg:mt-0 space-y-8">
-                                {/* Header Section */}
-                                <div className="relative mb-6">
-                                    <span className="text-orange-500 text-sm font-semibold tracking-wider uppercase">
-                                        DivyNumerology
-                                    </span>
-                                    <h2 className="mt-2 text-4xl font-extrabold text-orange-900 dark:text-white leading-snug sm:text-[40px]/[48px]">
-                                        Empowering lives through the ancient science of numerology
-                                    </h2>
-                                </div>
-
-                                {/* Intro Section */}
-                                <div className="p-6 rounded-2xl bg-orange-50/60 dark:bg-orange-100/10 shadow backdrop-blur-sm border border-orange-100 dark:border-dark-4 transition hover:shadow-lg">
-                                    <p className="text-base text-orange-800 dark:text-orange-200 leading-relaxed">
-                                        Welcome to <strong>DivyNumerology</strong>, where ancient wisdom meets modern insight.
-                                        Founded by renowned numerologist <strong>Divyya Sharma</strong>, our mission is to help individuals
-                                        unlock their full potential through the power of numbers.
-                                    </p>
-                                </div>
-
-                                {/* Story Section */}
-                                <div className="p-6 rounded-2xl bg-gradient-to-tr from-yellow-100 via-orange-50 to-yellow-50 dark:from-dark dark:to-dark-2 border-l-4 border-orange-400 shadow-inner">
-                                    <h3 className="text-xl font-semibold mb-3 text-orange-600 flex items-center gap-2">
-                                        <svg className="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" strokeWidth="2"
-                                            viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8c.868 0 1.634.276 2.26.74l3.24-3.24a9 9 0 10-3.24 3.24A3.993 3.993 0 0112 8z" /></svg>
-                                        The Journey
-                                    </h3>
-                                    <p className="text-base text-body-color dark:text-dark-6">
-                                        Divyya's journey began 12 years ago as a national bank officer. Her fascination with numbers led her to explore the Lo Shu grid chart...
-                                    </p>
-                                    <p className="mt-3 text-base text-body-color dark:text-dark-6">
-                                        With the support of her family, Divyya went on to establish a private degree college...
-                                    </p>
-                                </div>
-
-                                {/* Benefits */}
-                                <div className="p-6 rounded-xl bg-orange-100/60 dark:bg-orange-900/20 border border-orange-300 dark:border-orange-600">
-                                    <h3 className="text-xl font-semibold mb-4 text-orange-700 flex items-center gap-2">
-                                        <svg className="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" strokeWidth="2"
-                                            viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3" /></svg>
-                                        How Numerology Helps
-                                    </h3>
-                                    <ul className="space-y-2 list-disc list-inside text-orange-900 dark:text-orange-100">
-                                        <li>Reveal your life's purpose and direction</li>
-                                        <li>Protect you during challenging times</li>
-                                        <li>Guide informed decisions</li>
-                                        <li>Enhance relationships and careers</li>
-                                        <li>Find compatible partners</li>
-                                        <li>Name and number corrections for success</li>
-                                    </ul>
-                                </div>
-
-                                {/* Mission */}
-                                <div className="relative p-6 rounded-2xl bg-gradient-to-br from-yellow-50 via-orange-50 to-amber-100 dark:bg-dark-2 border border-yellow-200 dark:border-dark-3">
-                                    <h3 className="text-xl font-semibold mb-3 text-orange-800 flex items-center gap-2">
-                                        <svg className="w-5 h-5 text-yellow-600" fill="none" stroke="currentColor" strokeWidth="2"
-                                            viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                        Our Mission
-                                    </h3>
-                                    <ul className="list-disc list-inside space-y-2 text-body-color dark:text-dark-6">
-                                        <li>To empower individuals through sacred Mahavidya</li>
-                                        <li>To help people live balanced, fulfilling lives</li>
-                                    </ul>
-                                </div>
-
-                                {/* Final Message */}
-                                <div className="p-6 rounded-2xl bg-orange-50/50 border border-orange-100 dark:border-dark-4 shadow">
-                                    <p className="text-base text-body-color dark:text-dark-6">
-                                        Join us on this journey of self-discovery and enlightenment. Divyya Sharma sends her warmest wishes for your present and future.
-                                    </p>
-                                </div>
-
-                                {/* CTA */}
-                                <div className="pt-4 text-center">
-                                    <a
-                                        href="#"
-                                        className="inline-flex items-center gap-2 justify-center py-3 px-8 text-base font-semibold text-white bg-gradient-to-r from-orange-500 to-orange-600 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300 motion-safe:animate-pulse"
-                                    >
-                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2"
-                                            viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" /></svg>
-                                        Get Started
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+  return (
+    <>
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-b from-yellow-50 to-orange-50 pt-24 pb-16">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxjaXJjbGUgZmlsbD0iI2ZmYzEwNyIgY3g9IjMwIiBjeT0iMzAiIHI9IjEwIi8+PC9nPjwvc3ZnPg==')]"></div>
+        </div>
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            {/* Founder Images */}
+            <div className="w-full lg:w-5/12 relative">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="relative group overflow-hidden rounded-2xl shadow-xl">
+                  <img
+                    src="maam.jpg"
+                    alt="Divyya Sharma"
+                    className="w-full h-auto object-cover transform group-hover:scale-105 transition duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                    <span className="text-white font-medium">Divyya Sharma</span>
+                  </div>
                 </div>
-            </section>
-            <HeroSection/>
-            <Footer/>
-        </>
-    );
+                <div className="relative group overflow-hidden rounded-2xl shadow-xl mt-8">
+                  <img
+                    src="maam2.jpg"
+                    alt="Divyya Sharma Teaching"
+                    className="w-full h-auto object-cover transform group-hover:scale-105 transition duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                    <span className="text-white font-medium">Divyya Sharma Teaching</span>
+                  </div>
+                </div>
+              </div>
+              {/* <div className="absolute -bottom-6 -right-6 z-10 hidden lg:block">
+                <img
+                  src="logo-removebg.png"
+                  alt="DivyNumerology Logo"
+                  className="w-32 h-32 object-contain"
+                />
+              </div> */}
+            </div>
+
+            {/* Hero Content */}
+            <div className="w-full lg:w-7/12">
+              <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-orange-100">
+                <span className="inline-block px-4 py-1 mb-4 text-xs font-semibold tracking-wider text-orange-600 uppercase rounded-full bg-orange-100">
+                  Ancient Wisdom, Modern Application
+                </span>
+                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                  Empowering Lives Through <span className="text-orange-600">Numerology</span>
+                </h1>
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  Founded by renowned numerologist <strong>Divyya Sharma</strong>, DivyNumerology combines ancient Vedic wisdom with modern insights to help you unlock your true potential and navigate life's challenges with confidence.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <a
+                    href="/services"
+                    className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                  >
+                    Explore Services
+                  </a>
+                  <a
+                    href="#certificates"
+                    className="px-8 py-3 bg-white text-orange-600 font-medium rounded-full shadow-md border border-orange-200 hover:bg-orange-50 transition-all duration-300"
+                  >
+                    View Credentials
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Story Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              The <span className="text-orange-600">DivyNumerology</span> Story
+            </h2>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto rounded-full"></div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* English Version */}
+            <div className="space-y-8">
+              <div className="p-6 bg-orange-50 rounded-xl border-l-4 border-orange-500 shadow-sm">
+                <h3 className="text-xl font-semibold mb-3 text-orange-700">From Banking to Numerology</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Divyya Sharma's journey began 12 years ago as a national bank officer. Fascinated by intricate number patterns, she embarked on a life-changing exploration of numerology.
+                </p>
+              </div>
+
+              <div className="p-6 bg-white rounded-xl border border-orange-100 shadow-sm">
+                <h3 className="text-xl font-semibold mb-3 text-orange-700">The Turning Point</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Her initial numerology foray analyzed her Lo Shu grid chart, revealing an unexpected future in education. Within a year, she became Assistant Professor at a reputed State University.
+                </p>
+              </div>
+
+              <div className="p-6 bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl shadow-sm">
+                <h3 className="text-xl font-semibold mb-3 text-orange-700">Establishing Roots</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  With family support, Divyya established a private degree college within two years, reinforcing her belief in celestial bodies' influence and deepening her numerology commitment.
+                </p>
+              </div>
+            </div>
+
+            {/* Hindi Version */}
+            <div className="space-y-8">
+              <div className="p-6 bg-yellow-50 rounded-xl border-l-4 border-yellow-500 shadow-sm">
+                <h3 className="text-xl font-semibold mb-3 text-yellow-700">बैंकिंग से अंकशास्त्र तक</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  एक प्रतिष्ठित राष्ट्रीय बैंक में अधिकारी रहते हुए मेरा झुकाव अंकशास्त्र की ओर हुआ। खुद का लॉशोग्रिड चार्ट जब मैंने देखा, तो भविष्य में शिक्षा और ज्योतिष के क्षेत्र में जाने का संकेत मिला।
+                </p>
+              </div>
+
+              <div className="p-6 bg-white rounded-xl border border-yellow-100 shadow-sm">
+                <h3 className="text-xl font-semibold mb-3 text-yellow-700">निर्णायक मोड़</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  परिस्थितियाँ बदलीं और मैं चौधरी चरण सिंह विश्वविद्यालय में असिस्टेंट प्रोफेसर बनी। आगे चलकर एक डिग्री कॉलेज की भी स्थापना की।
+                </p>
+              </div>
+
+              <div className="p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-xl shadow-sm">
+                <h3 className="text-xl font-semibold mb-3 text-yellow-700">अंकशास्त्र में विश्वास</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  इन अनुभवों से यह यकीन हुआ कि हमारे निर्णय नक्षत्रों और संख्याओं द्वारा तय होते हैं। इसी ने मेरा विश्वास इस दिव्य विद्या पर और प्रबल किया।
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certificate Carousel */}
+      <section id="certificates" className="py-16 bg-orange-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our <span className="text-orange-600">Certifications</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              DivyNumerology is backed by extensive training and recognized certifications in the field of numerology.
+            </p>
+          </div>
+
+          <CertificateSlider certificates={certificates}/>
+        </div>
+      </section>
+
+      {/* Philosophy Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <img
+                src="energy.jpg"
+                alt="Numerology Energy"
+                className="rounded-xl shadow-xl w-full max-w-md mx-auto"
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Our <span className="text-orange-600">Philosophy</span>
+              </h2>
+              <div className="space-y-6">
+                <p className="text-gray-700 leading-relaxed">
+                  अंकशास्त्र की अचूक विद्या की सहायता से, नियति द्वारा निर्धारित रास्ते का आभास यदि हमें हो जाए तो उस पर तीव्र व लंबी दौड़ लगाकर निश्चित ही अपने गंतव्य का स्पर्श किया जा सकता है।
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  पिछले एक दशक से अधिक समय में सहस्रों व्यक्तियों के लाभान्वित होने का माध्यम ईश्वर ने मुझे बनाया जिससे उन भद्रजनों ने मुझे इतनी शुभकामनाएँ दीं की मेरी झोली छोटी पड़ गई।
+                </p>
+                <div className="bg-orange-50 p-6 rounded-xl border border-orange-200">
+                  <p className="text-orange-700 font-medium italic">
+                    "DIVYNUMEROLOGY के माध्यम से हम आपसे जुड़ रहे हैं और इस पवित्र महाविद्या का जितना लाभ आप ले सकें उतने में आपका भरपूर सहयोग करने हेतु प्रतिबद्ध हैं।"
+                  </p>
+                </div>
+                <p className="text-orange-600 font-semibold">
+                  आप सभी को आनंदमयी वर्तमान सहित प्रकाशमान भविष्य की असीम मंगलकामनाएँ।
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-orange-50 to-yellow-50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Ready to Discover Your <span className="text-orange-600">Numerological Path</span>?
+          </h2>
+          <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+            Unlock the secrets hidden in your numbers and gain valuable insights into your life's journey.
+          </p>
+          <div className="flex flex-wrap justify-center gap-6">
+            <a
+              href="/consultation"
+              className="px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg"
+            >
+              Book a Consultation
+            </a>
+            <a
+              href="/learn"
+              className="px-8 py-4 bg-white text-orange-600 font-medium rounded-full shadow-md border border-orange-200 hover:bg-orange-50 transition-all duration-300 text-lg"
+            >
+              Learn Numerology Basics
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
 };
 
 export default About;

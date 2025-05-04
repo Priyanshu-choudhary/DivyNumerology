@@ -17,7 +17,7 @@ import {
   PhoneIcon
 } from '@heroicons/react/solid';
 import ArrowButton from '../../Buttons/ArrowButton';
-import WhatsAppButton from '../../Buttons/WhatsAppButton';
+
 const Home = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
@@ -83,7 +83,7 @@ const Home = () => {
               >
                 Calculate Your Life Path
               </motion.button>
-              <WhatsAppButton/>
+        
             </motion.div>
           </div>
           <div className="lg:w-1/2 flex justify-center">
