@@ -3,7 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useNavigate } from 'react-router-dom';
 // Import professional icons from Heroicons
-
+// import { useRouter } from "next/router";
 import {
   AcademicCapIcon,
   BookOpenIcon,
@@ -16,10 +16,40 @@ import {
   DocumentTextIcon,
   PhoneIcon
 } from '@heroicons/react/solid';
+import ArrowButton from '../../Buttons/ArrowButton';
 const Home = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
   const navigate = useNavigate();
+
+  // const router = useRouter();
+  const services = [
+    {
+      title: "Friends and Enemies",
+      desc: "Find numbers that align or clash with your life path.",
+      icon: <AcademicCapIcon className="w-10 h-10 text-yellow-500" />,
+      link: "/Calculators/FriendsAndEnemy"
+    },
+    {
+      title: "Blessing Year",
+      desc: "Reveal the numerology theme guiding you this year.",
+      icon: <BookOpenIcon className="w-10 h-10 text-yellow-500" />,
+      link: "/Calculators/BlessingYear"
+    },
+    {
+      title: "Personal Year Calculator",
+      desc: "See how this year's energy influences your journey.",
+      icon: <UserGroupIcon className="w-10 h-10 text-yellow-500" />,
+      link: "/Calculators/PersonalYear"
+    },
+    {
+      title: "Mobile Number Search",
+      desc: "Choose a mobile number that matches your energy.",
+      icon: <CalendarIcon className="w-10 h-10 text-yellow-500" />,
+      link: "/Calculators/MobileNumber"
+    }
+  ];
+
 
   useEffect(() => {
     if (inView) {
@@ -84,46 +114,46 @@ const Home = () => {
             </h2>
             <div className="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
             <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50">
-  <div className="max-w-5xl mx-auto">
-   
+              <div className="max-w-5xl mx-auto">
 
-    <div className="grid md:grid-cols-2 gap-12 items-start">
-      {/* English Section */}
-      <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-yellow-500">
-        {/* <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Our Story</h3> */}
-        <div className="space-y-4 text-gray-700 leading-relaxed">
-          <p>Welcome to Divynumerology, where the ancient science of numerology meets passion and expertise. Founded by renowned numerologist Divyya Sharma, our mission is to empower individuals to achieve their full potential.</p>
-          
-          <p>Divyya Sharma's numerology journey began 12 years ago as a national bank officer. Fascinated by intricate number patterns, she embarked on life-changing exploration. Her initial numerology foray analyzed her Lo Shu grid chart, revealing an unexpected future in education.</p>
-          
-          <p>Within a year, she became Assistant Professor at a reputed State University, igniting a passion for education. With family support, Divyya established a private degree college within two years, reinforcing her belief in celestial bodies' influence.</p>
-          
-          <p>Through rigorous study and research, Divyya discovered planetary movements' vast knowledge and interconnectedness with numbers and human life. At Divynumerology, we believe that understanding numerology unlocks human potential, contributing to a harmonious existence.</p>
-        </div>
-      </div>
 
-      {/* Hindi Section */}
-      <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-orange-500">
-        {/* <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">हमारी कहानी</h3> */}
-        <div className="space-y-4 text-gray-700 leading-relaxed text-justify">
-          <p>अंकशास्त्र की अचूक विद्या की सहायता से, नियति द्वारा निर्धारित रास्ते का आभास यदि हमें हो जाए तो उस पर तीव्र व लंबी दौड़ लगाकर निश्चित ही अपने गंतव्य का स्पर्श किया जा सकता है।</p>
-          
-          <p>साथ ही जटिल समय में, इस विज्ञान द्वारा तय उपायों से हम उसी प्रकार अपना बचाव कर सकते हैं जैसे छाते के उपयोग से बारिश से बचा जाता है। पीछे मुड़कर देखती हूँ तो लगभग 12 वर्ष पूर्व एक प्रतिष्ठित राष्ट्रीय बैंक की अधिकारी रहते मेरा रुझान अंक शास्त्र की ओर हुआ।</p>
-          
-          <p>धीरे-धीरे अध्ययन करने पर मैंने स्वयं के लॉशोग्रिड चार्ट का विश्लेषण किया तो उक्त कार्यक्षेत्र छोड़ कर ज्योतिष व शिक्षा के क्षेत्र में जाने का संकेत मिला। समय ने करवट ली और परिस्थिति के अधीन अगले एक वर्ष के भीतर मैंने चौधरी चरण सिंह विश्वविद्यालय परिसर में असिस्टेंट प्रोफेसर का दायित्व ग्रहण किया।</p>
-          
-          <p>शिक्षा के क्षेत्र में मेरी भागीदारी तब और गहरी हुई जब अगले दो वर्ष में मैंने अपने परिवार की सहायता से एक डिग्री कॉलेज की स्थापना की। इस घटनाक्रम से मुझे अनुभूति हुई कि अंतिम निर्णय हमारे नक्षत्रों का ही होता है।</p>
-        </div>
-      </div>
-    </div>
+                <div className="grid md:grid-cols-2 gap-12 items-start">
+                  {/* English Section */}
+                  <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-yellow-500">
+                    {/* <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Our Story</h3> */}
+                    <div className="space-y-4 text-gray-700 leading-relaxed">
+                      <p>Welcome to Divynumerology, where the ancient science of numerology meets passion and expertise. Founded by renowned numerologist Divyya Sharma, our mission is to empower individuals to achieve their full potential.</p>
 
-    <div className="mt-12 text-center">
-      <button className="px-8 py-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-medium rounded-full hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-        Learn More About Our Services
-      </button>
-    </div>
-  </div>
-</div>
+                      <p>Divyya Sharma's numerology journey began 12 years ago as a national bank officer. Fascinated by intricate number patterns, she embarked on life-changing exploration. Her initial numerology foray analyzed her Lo Shu grid chart, revealing an unexpected future in education.</p>
+
+                      <p>Within a year, she became Assistant Professor at a reputed State University, igniting a passion for education. With family support, Divyya established a private degree college within two years, reinforcing her belief in celestial bodies' influence.</p>
+
+                      <p>Through rigorous study and research, Divyya discovered planetary movements' vast knowledge and interconnectedness with numbers and human life. At Divynumerology, we believe that understanding numerology unlocks human potential, contributing to a harmonious existence.</p>
+                    </div>
+                  </div>
+
+                  {/* Hindi Section */}
+                  <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-orange-500">
+                    {/* <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">हमारी कहानी</h3> */}
+                    <div className="space-y-4 text-gray-700 leading-relaxed text-justify">
+                      <p>अंकशास्त्र की अचूक विद्या की सहायता से, नियति द्वारा निर्धारित रास्ते का आभास यदि हमें हो जाए तो उस पर तीव्र व लंबी दौड़ लगाकर निश्चित ही अपने गंतव्य का स्पर्श किया जा सकता है।</p>
+
+                      <p>साथ ही जटिल समय में, इस विज्ञान द्वारा तय उपायों से हम उसी प्रकार अपना बचाव कर सकते हैं जैसे छाते के उपयोग से बारिश से बचा जाता है। पीछे मुड़कर देखती हूँ तो लगभग 12 वर्ष पूर्व एक प्रतिष्ठित राष्ट्रीय बैंक की अधिकारी रहते मेरा रुझान अंक शास्त्र की ओर हुआ।</p>
+
+                      <p>धीरे-धीरे अध्ययन करने पर मैंने स्वयं के लॉशोग्रिड चार्ट का विश्लेषण किया तो उक्त कार्यक्षेत्र छोड़ कर ज्योतिष व शिक्षा के क्षेत्र में जाने का संकेत मिला। समय ने करवट ली और परिस्थिति के अधीन अगले एक वर्ष के भीतर मैंने चौधरी चरण सिंह विश्वविद्यालय परिसर में असिस्टेंट प्रोफेसर का दायित्व ग्रहण किया।</p>
+
+                      <p>शिक्षा के क्षेत्र में मेरी भागीदारी तब और गहरी हुई जब अगले दो वर्ष में मैंने अपने परिवार की सहायता से एक डिग्री कॉलेज की स्थापना की। इस घटनाक्रम से मुझे अनुभूति हुई कि अंतिम निर्णय हमारे नक्षत्रों का ही होता है।</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-12 text-center">
+                  <button className="px-8 py-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-medium rounded-full hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    Learn More About Our Services
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Experience Card */}
@@ -191,32 +221,11 @@ const Home = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: "Life Path Analysis",
-                desc: "Discover your core purpose and life challenges",
-                icon: <AcademicCapIcon className="w-10 h-10 text-yellow-500" />
-              },
-              {
-                title: "Name Correction",
-                desc: "Optimize your name&apos;s vibration for success",
-                icon: <BookOpenIcon className="w-10 h-10 text-yellow-500" />
-              },
-              {
-                title: "Compatibility Reading",
-                desc: "Analyze relationship dynamics through numbers",
-                icon: <UserGroupIcon className="w-10 h-10 text-yellow-500" />
-              },
-              {
-                title: "Yearly Forecast",
-                desc: "Plan your year with confidence using numerology insights",
-                icon: <CalendarIcon className="w-10 h-10 text-yellow-500" />
-              }
-            ].map((service, index) => (
+            {services.map((service, index) => (
               <motion.div
                 key={index}
                 whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0,0,0,0.1)" }}
-                className="bg-yellow-50 p-6 rounded-lg border border-gray-200"
+                className="bg-yellow-50 p-6 rounded-lg border border-gray-200 relative pb-16"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -224,6 +233,12 @@ const Home = () => {
                 <div className="mb-4">{service.icon}</div>
                 <h3 className="text-xl font-bold text-gray-800 mb-2">{service.title}</h3>
                 <p className="text-gray-600">{service.desc}</p>
+
+                <div className="absolute bottom-4 left-4">
+                <button onClick={() => navigate(service.link)}>
+                    <ArrowButton />
+                  </button>
+                </div>
               </motion.div>
             ))}
           </div>

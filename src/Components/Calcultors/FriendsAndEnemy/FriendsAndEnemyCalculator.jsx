@@ -132,7 +132,7 @@ const FriendsAndEnemyCalculator = () => {
           Enter your Date of Birth (DD/MM/YYYY)
         </label>
         <input
-          type="text"
+          type="date"
           value={dob}
           onChange={handleChange}
           placeholder="e.g. 06/04/1999"

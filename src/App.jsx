@@ -9,6 +9,7 @@ import PrivacyPolicy from './Components/TermsAndConditions/PrivacyPolicy';
 import CancellationRefundPolicy from './Components/TermsAndConditions/CancellationRefundPolicy';
 import ShippingAndDeliveryPolicy from './Components/TermsAndConditions/ShippingAndDeliveryPolicy';
 import About from './Components/Home/About';
+import ScrollToTop from './ScrollToTop';
 // import Navbar from './Components/Navbr/Navbr';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
   return (
     <Router>
       <Navbar /> {/* Added the Navbar component here */}
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/Calculators" element={<CalculatorNav />} />
